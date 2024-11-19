@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #3d5b59;
+  --foreground: #0c5c7e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #010418;
+    --foreground: #0c5c7e;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .menuLink {
+    @apply cursor-pointer hover:text-slate-300 ;
+  }
+  .icon {
+    @apply p-2  dark:bg-[] cursor-pointer mx-1.5 dark:hover:bg-yellow-400;
+  }
+}
